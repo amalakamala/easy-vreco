@@ -29,8 +29,20 @@ hr {
 	border: 2px solid black;
 }
 
+
+
+
+/*------------ BOTONES E INPUT ------------*/
 .text-btn{
-	padding: 10px;
+	padding: 10px 0 10px 10px;
+}
+
+.text-btn .row{
+	margin-right: 0px;
+}
+
+.text-input{
+	padding-right: 0;
 }
 
 .text-input p{
@@ -38,9 +50,6 @@ hr {
 	font-weight: 700;
 	margin-bottom: 0px;
 }
-
-
-/*------------ BOTONES E INPUT ------------*/
 
 button{
 	margin: 15px auto;
