@@ -3,9 +3,13 @@ function initMap(){
 		zoom: 5,
 		center: {lat: -9.1191427, lng: -77.0349046},
 		mapTypeControl: false,
-		zoomControl: false,
-		streetViewControl: false
+		zoomControl: true,
+		streetViewControl: true,
 	});
+
+ 
+
+
 
 	function buscar(){
 		if(navigator.geolocation){
@@ -20,10 +24,13 @@ function initMap(){
 		latitud = posicion.coords.latitude;
 		longitud = posicion.coords.longitude;
 
+		var image = 'assets/img/custom-bici.png';
+
 		var miUbicacion = new google.maps.Marker({
 			position: {lat:latitud, lng:longitud},
 			animation: google.maps.Animation.DROP,
-			map: map
+			map: map,
+			icon: image
 		});
 
 		map.setZoom(17);
@@ -33,7 +40,6 @@ function initMap(){
 	var funcionError = function(error){
 		alert("tenemos un problema con encontrar tu ubicación");
 	}
-
 
 	/* AUTOCOMPRETADO INPUT */
 	var inputO = (document.getElementById('origen'));
@@ -80,14 +86,6 @@ function initMap(){
 		
 	document.getElementById("ruta").addEventListener("click",onChangeHandler); 
 }
-
-
-var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
-var marker = new google.maps.Marker({
-    position: myLatLng,
-    map: map,
-    icon: iconBase + '../img/custom-marker.png'
-});
 
 
 
