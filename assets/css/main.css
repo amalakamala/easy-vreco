@@ -14,8 +14,15 @@
 	width: 300px;
 }
 
+#line{
+	border: 0;
+	border-top: 1px dashed grey; 
+    height: 1px;
+	width: 100%;
+    padding: 0;	
+}
+
 hr {
-	width: 
     height: 1px;
     border: 0;
     border-top: 1px solid #ccc;
@@ -67,9 +74,11 @@ button{
 button:hover,
 button:focus{
 	outline: 0;
-	background-color: #DE8D0C;	
 }
 
+button:hover{
+	background-color: #DE8D0C;	
+}
 
 /*------------ FOOTER ------------*/
 
